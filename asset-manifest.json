@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/glorious/static/css/main.c774df81.css",
+    "main.js": "/glorious/static/js/main.41a42293.js",
+    "index.html": "/glorious/index.html",
+    "main.c774df81.css.map": "/glorious/static/css/main.c774df81.css.map",
+    "main.41a42293.js.map": "/glorious/static/js/main.41a42293.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c774df81.css",
+    "static/js/main.41a42293.js"
+  ]
+}
