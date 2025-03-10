@@ -5,7 +5,27 @@ const Main = () => {
   const [showNeonAlert, setShowNeonAlert] = useState(true);
   const audioRef = useRef(null);
   const videoRef = useRef(null);
+  const clickAudioRef = useRef(null);
   const neonButtonRef = useRef(null);
+
+  useEffect(() => {
+    const handleNeonClick = () => {
+      clickAudioRef.current.volume = 0.3;
+      clickAudioRef.current.play().catch(console.error);
+    };
+
+    const neonButtons = document.querySelectorAll('.neon-button, #neon-button');
+    
+    neonButtons.forEach(button => {
+      button.addEventListener('click', handleNeonClick);
+    });
+
+    return () => {
+      neonButtons.forEach(button => {
+        button.removeEventListener('click', handleNeonClick);
+      });
+    };
+  }, []);
 
   useEffect(() => {
     const playMedia = () => {
@@ -17,9 +37,7 @@ const Main = () => {
         .then(() => {
           sessionStorage.setItem('audioStarted', 'true');
         })
-        .catch(error => {
-          console.log('Autoplay blocked:', error);
-        });
+        .catch(console.error);
     };
 
     if (sessionStorage.getItem('audioStarted')) {
@@ -35,7 +53,7 @@ const Main = () => {
   }, []);
 
   return (
-    <div>
+ <div>
       {showNeonAlert && (
         <div className="neon-alert">
           <p>ARE YOU READY TO BRIDGE?</p>
@@ -65,6 +83,13 @@ const Main = () => {
         />
       </audio>
 
+      <audio ref={clickAudioRef}>
+        <source 
+          src={`${process.env.PUBLIC_URL}/assets/jackpot.mp3`} 
+          type="audio/mpeg" 
+        />
+      </audio>
+
       <div className="container">
         <h1 className="glitch-title">$GSUN SOLAR POWERED COIN</h1>
         
@@ -82,8 +107,10 @@ const Main = () => {
             <br /><br />
             💎 QUANTUM-RESISTANT BRIDGING – YOUR RETARDED GRANDKIDS WILL BE USING GSUNCOIN TO BUY SPACESHIPS WHILE YOU’RE STILL STRUGGLING TO PAY OFF THAT HOOKER FROM LAST FRIDAY
           </p>
-          <button className="neon-button">Show me your wallet!</button>
+          <button className="neon-button">SHOW ME YOUR WALLET!!</button>
           <button className="neon-button">AHHH YEAH BABY!! I'M FINNA BRIDGE!!</button>
+
+          <h1>DEVS ARE DOXXED IN TELEGRAM 🔥🔥</h1> 
         </div>
       </div>
     </div>
