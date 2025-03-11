@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/glorious/static/css/main.1adbb258.css",
-    "main.js": "/glorious/static/js/main.f04137f8.js",
+    "main.css": "/glorious/static/css/main.a6954f94.css",
+    "main.js": "/glorious/static/js/main.a9bb7b88.js",
     "index.html": "/glorious/index.html",
-    "main.1adbb258.css.map": "/glorious/static/css/main.1adbb258.css.map",
-    "main.f04137f8.js.map": "/glorious/static/js/main.f04137f8.js.map"
+    "main.a6954f94.css.map": "/glorious/static/css/main.a6954f94.css.map",
+    "main.a9bb7b88.js.map": "/glorious/static/js/main.a9bb7b88.js.map"
   },
   "entrypoints": [
-    "static/css/main.1adbb258.css",
-    "static/js/main.f04137f8.js"
+    "static/css/main.a6954f94.css",
+    "static/js/main.a9bb7b88.js"
   ]
 }
