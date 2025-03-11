@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/glorious/static/css/main.a6954f94.css",
-    "main.js": "/glorious/static/js/main.a9bb7b88.js",
+    "main.js": "/glorious/static/js/main.90d8883e.js",
     "index.html": "/glorious/index.html",
     "main.a6954f94.css.map": "/glorious/static/css/main.a6954f94.css.map",
-    "main.a9bb7b88.js.map": "/glorious/static/js/main.a9bb7b88.js.map"
+    "main.90d8883e.js.map": "/glorious/static/js/main.90d8883e.js.map"
   },
   "entrypoints": [
     "static/css/main.a6954f94.css",
-    "static/js/main.a9bb7b88.js"
+    "static/js/main.90d8883e.js"
   ]
 }
