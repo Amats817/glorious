@@ -86,12 +86,8 @@ const Main = () => {
       >
         <source 
           src={`${process.env.PUBLIC_URL}/assets/background.mp4`} 
-          type="video/mp4; codecs=hvc1" 
+          type="video/mp4" 
         />
-        <source 
-            src={`${process.env.PUBLIC_URL}/assets/background.webm`} 
-            type="video/webm" 
-          />
       </video>
 
       <audio ref={audioRef} id="audio-loop" loop>
