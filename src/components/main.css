@@ -124,3 +124,147 @@
     box-shadow: 0 0 20px #ff66ff, 0 0 40px #ff66ff;
   }
   
+  .neon-button-buy {
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+    border: 3px solid #fff;
+    color: #fff;
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    margin: 2rem 0;
+    border-radius: 50px;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="8" y="24" fill="%23ff00ff" style="font-size:24px">🚀</text></svg>'), auto;
+    animation: rainbow 1.5s infinite, shake 0.5s infinite;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+    box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff;
+    transition: all 0.3s;
+    text-align: center;
+    line-height: 1.4;
+  }
+  
+  .neon-button-buy:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 0 50px #ff00ff, 0 0 100px #00ffff;
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff);
+  }
+  
+  @keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+
+  .flying-coin {
+    animation: float 2s ease-out;
+    opacity: 0.8;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0) scale(1); opacity: 0.8; }
+    100% { transform: translateY(-100px) scale(0.5); opacity: 0; }
+  }
+
+  .flying-coin-2 {
+    animation: float 2s ease-out, spin 1s linear infinite;
+    opacity: 0.8;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Media Queries */
+@media (max-width: 768px) {
+  .glitch-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .panel {
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 95%;
+  }
+
+  .neon-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    margin: 1rem 0.3rem;
+  }
+
+  .neon-button-buy {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+  }
+
+  .neon-alert p {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .glitch-title {
+    font-size: 1.5rem;
+  }
+
+  .panel p {
+    font-size: 0.9rem;
+  }
+
+  .neon-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    margin: 0.5rem 0.2rem;
+  }
+
+  .neon-button-buy {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.1;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .flying-coin {
+    width: 60px !important;
+  }
+}
+
+@media (hover: none) {
+  .neon-button:hover {
+    background: transparent;
+    color: #0f0;
+    box-shadow: none;
+  }
+  
+  .neon-button-buy:hover {
+    transform: none;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+  }
+}
+
+#video-background {
+  -webkit-transform: translateZ(0);  
+  transform: translateZ(0);
+  object-fit: cover;  
+}
+
+@supports (-webkit-touch-callout: none) {
+  #video-background {
+    opacity: 0.99; 
+  }
+  
+  .neon-alert {
+    -webkit-backdrop-filter: blur(5px);
+  }
+}
