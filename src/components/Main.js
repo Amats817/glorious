@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import GSunCoin from './GSunCoin';
 import './main.css';
 
 const Main = () => {
@@ -91,12 +92,12 @@ const Main = () => {
       </audio>
 
       <div className="container">
-        <h1 className="glitch-title">$GSUN SOLAR POWERED COIN</h1>
+        <h1 className="glitch-title">$GSUN – SOLAR POWERED COIN</h1>
         
         <div className="panel">
-          <img 
-            src={`${process.env.PUBLIC_URL}/assets/gsun-icon.png`} 
-            alt="GSun Icon" 
+          <GSunCoin
+            src={`${process.env.PUBLIC_URL}/assets/spinning-gsun.webm`} 
+            width="20%"
           />
           <p>
             🔆 PROOF-OF-SUN (POSUN) – YOU WANNA STAKE? STEP OUTSIDE DUMBASS.
@@ -105,7 +106,7 @@ const Main = () => {
             <br /><br />
             🔥 SELF-BURNING MECHANISM – EVERY TRANSACTION? A FRACTION GETS VAPORIZED. SUPPLY GOES DOWN, PRICE GOES UP. SIMPLE MATH.
             <br /><br />
-            💎 QUANTUM-RESISTANT BRIDGING – YOUR RETARDED GRANDKIDS WILL BE USING GSUNCOIN TO BUY SPACESHIPS WHILE YOU’RE STILL STRUGGLING TO PAY OFF THAT HOOKER FROM LAST FRIDAY
+            💎 QUANTUM-RESISTANT BRIDGING – YOUR RETARDED GRANDKIDS WILL BE USING $GSUN TO BUY SPACESHIPS WHILE YOU’RE STILL STRUGGLING TO PAY OFF THAT HOOKER FROM LAST FRIDAY.
           </p>
           <button className="neon-button">SHOW ME YOUR WALLET!!</button>
           <button className="neon-button">AHHH YEAH BABY!! I'M FINNA BRIDGE!!</button>
